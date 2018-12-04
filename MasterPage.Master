@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="FLOE.Admin.MasterPage" %>
+
+<!DOCTYPE html>  
+  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head runat="server">
+    <title>FLOE</title>
+    <link rel="shortcut icon" href="/Images/logo.png" />
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet" />
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet" />
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/s-plugins/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- Pagination CSS -->
+    <link href="../vendor/pagination/pagination-ys.css" rel="stylesheet" />
+
+    <!-- Glyphicon -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .content {
+            font-size: 18px;
+        }
+        .shift {
+            position:absolute;
+            right: 0;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">  
+    </asp:ContentPlaceHolder>  
+</head>  
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Dashboard.aspx">FLOE System</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li><i class="glyphicon glyphicon-user"></i>&nbspWelcome&nbsp<asp:Label ID="profile" runat="server" Text=""></asp:Label></li>
+                <li><a href="/Logout.aspx"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="Dashboard.aspx"><i class="glyphicon glyphicon-dashboard"></i>  Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="Upload.aspx"><i class="glyphicon glyphicon-upload"></i>  Upload Excel File</a>
+                        </li>
+                        <li>
+                            <a href="Setup.aspx"><i class="glyphicon glyphicon-hdd"></i>  Master Setup</a>
+                        </li>
+                        <li>
+                            <a href="Charges.aspx"><i class="glyphicon glyphicon-usd"></i>  Charges</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-calendar"></i>  Monthly Updates</a>
+                        </li>
+                        <li>
+                            <a href="HistoryLog.aspx"><i class="glyphicon glyphicon-list-alt"></i>  History Log</a>
+                        </li>
+                        <li>
+                            <a href="IDremoval.aspx"><i class="glyphicon glyphicon-list-alt"></i>  ID Removal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">  
+             </asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+    </form> 
+</body>  
+</html>
